@@ -30,9 +30,12 @@ const CountryDetail = props => {
             <td>
               <ul>
                 {country.borders.map(border => {
+                  const con = countries.find(country => {
+                    return country.cca3 === border;
+                  });
                   return (
-                    <li key={country.cca2}>
-                      <Link to={`/${border}`}>{border}</Link>
+                    <li>
+                      <Link to={`/${border}`}>{con.name.common}</Link>
                     </li>
                   );
                 })}
