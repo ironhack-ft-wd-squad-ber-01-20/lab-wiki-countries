@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -20,6 +20,21 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  padding: 1rem;
+}
+.navbar .container {
+  padding: 0 !important;
+}
+
+.navbar {
+  height: 10vh !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
 }
 
 @keyframes App-logo-spin {
