@@ -38,7 +38,7 @@ const CountryDetails = props => {
             <td>Borders</td>
             <td>
               <ul>
-                {countryDetail.borders.map(border => {
+                {countryDetail.borders.map((border, index) => {
                   {
                     /* let borderName = countries.find(country => {
                     return country.cca3 === border;
@@ -46,7 +46,9 @@ const CountryDetails = props => {
                   }
                   return (
                     <li>
-                      <Link to={`/${border}`}>{border}</Link>
+                      <Link key={index} to={`/${border}`}>
+                        {border}
+                      </Link>
                     </li>
                   );
                 })}
