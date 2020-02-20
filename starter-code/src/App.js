@@ -53,7 +53,7 @@ const CountryDetail = props => {
 };
 
 const Welcome = props => {
-  return <h1>Welcome to CountryWiki</h1>;
+  return <h1>Welcome to WikiCountries</h1>;
 };
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
         <div className="row">
           <div
             className="list-group col-3"
-            style={{ maxHeight: "90vh", overflow: "scroll" }}
+            style={{ maxHeight: "85vh", overflow: "scroll" }}
           >
             <div className="list-group-item bg-dark" style={{ color: "white" }}>
               Countries
