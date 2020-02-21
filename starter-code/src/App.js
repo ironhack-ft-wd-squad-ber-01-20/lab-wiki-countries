@@ -53,7 +53,7 @@ const CountryDetail = props => {
         <tbody>
           <tr>
             <td>Capital</td>
-            <td>{country.capital}</td>
+            <td>{country.capital[0]}</td>
           </tr>
           <tr>
             <td>Area</td>
@@ -68,10 +68,13 @@ const CountryDetail = props => {
             <td>Borders</td>
             <td>
               <ul>
-                {country.borders.map(el => {
+                {country.borders.map(cca3 => {
+                  const country = countries.find(country => {
+                    return country.cca3 === cca3;
+                  });
                   return (
-                    <li>
-                      <Link to={`/${el}`}>{el}</Link>
+                    <li key={cca3}>
+                      <Link to={`/${cca3}`}>{country.name.common}</Link>
                     </li>
                   );
                 })}
