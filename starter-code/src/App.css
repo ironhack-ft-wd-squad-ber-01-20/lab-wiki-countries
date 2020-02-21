@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +29,36 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+#bootstrap-overrides h1 {
+  margin: 16px auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-5 {
+  height: 90vh;
+  overflow: scroll;
+}
+
+.list-group {
+  height: 90vh;
+}
+
+.list-card {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+#bootstrap-overrides p {
+  margin: 0px;
 }
