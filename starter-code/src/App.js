@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import countries from "./countries.json";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, NavLink } from "react-router-dom";
 
 // let uniqueCountries = [];
 
@@ -20,9 +20,9 @@ const List = () => {
         {countries.map(country => {
           return (
             <div className="list-card">
-              {/* <p> */}
-              <Link to={`/${country.cca3}`}>{country.name.common}</Link>
-              {/* </p> */}
+              <NavLink key={country.cca3} to={`/${country.cca3}`}>
+                {country.flag} {country.name.common}
+              </NavLink>
             </div>
           );
         })}
@@ -53,13 +53,15 @@ const CountryDetail = props => {
         <tbody>
           <tr>
             <td>Capital</td>
-            <td>{country.name.capital}</td>
+            <td>{country.capital}</td>
           </tr>
           <tr>
             <td>Area</td>
             <td>
-              {country.name.area} <p>km</p>
-              <sup>2</sup>
+              {country.area}{" "}
+              <span>
+                km<sup>2</sup>
+              </span>
             </td>
           </tr>
           <tr>

@@ -31,6 +31,10 @@
   }
 } */
 
+#bootstrap-overrides h1 {
+  margin: 16px auto;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
