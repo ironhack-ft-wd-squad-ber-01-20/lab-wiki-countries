@@ -39,15 +39,14 @@ const CountryDetails = props => {
             <td>
               <ul>
                 {countryDetail.borders.map((border, index) => {
-                  {
-                    /* let borderName = countries.find(country => {
+                  let borderName = countries.find(country => {
                     return country.cca3 === border;
-                  }); */
-                  }
+                  });
                   return (
                     <li>
                       <Link key={index} to={`/${border}`}>
-                        {border}
+                        {borderName.flag}
+                        {borderName.name.official}
                       </Link>
                     </li>
                   );
