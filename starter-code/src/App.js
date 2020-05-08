@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import countries from './countries.json'
+import CountryDetail from './CountryDetail';
+import { Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
+function App() { 
+
   return (
+    <div className="Apppage">
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ <h1>WikiCountries</h1>
+ <ul style={{
+   listStyleType:'none'
+ }}> 
+{countries.map((country) => {
+return(
+  <li key={country.cca3} >
+ <Link className="link" to={`/countrydetail/${country.cca3}`}> {country.name.official}</Link>
+</li>
+)
+}
+)}
+ </ul>
+
+</div>
+<Switch>
+  <Route exact path="/countrydetail/:cca3" component={CountryDetail}/>
+</Switch>
     </div>
   );
 }
 
 export default App;
+

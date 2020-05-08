@@ -1,5 +1,44 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+
+
+.App >h1{
+position: fixed;
+width:450px;
+background-color: grey;
+}
+
+.App>ul{
+  margin-top:5rem;
+  margin-left:0;
+  width:450px;
+  margin:0;
+  padding: 0;
+}
+
+.Apppage{
+  display: flex;
+  flex-direction: row;
+  
+}
+li{
+  border-color: lightgrey;
+  border-style:double;
+  height:3rem;
+}
+li:hover{
+  background-color: rgb(48, 158, 231);
+}
+
+.link{
+  color:black;
+  text-decoration: none;
+}
+.link:hover{
+  color:white;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -29,4 +68,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.countrydetail{
+  position: fixed;
+  margin-left: 30rem;
+  width:250px;
+  display: flex;
+  flex-direction: column;
 }
