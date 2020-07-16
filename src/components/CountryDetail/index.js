@@ -13,22 +13,22 @@ export default function index(props) {
             <div className="title">
                 <h1>{name.official}</h1>
             </div>
-
             <div className="">
-
                 <p>Capital: {capital}</p>
                 <p>Area: {area}</p>
-                {borders.length === 0 && <h3>No Borders</h3>}
-                Borders
-                <ul>
-                    {borders && borders.map(border => {
-                        const [country] = countries?.filter(country => country.cca3 === border)
-                        return (<li>
-                            <Link key={country?.id} to={`/country/${country?.cca3}`}>{country?.name?.official}</Link>
-                        </li>)
-                    })}
-                </ul>
-
+                {borders.length === 0 ? <h3>No Borders</h3> :
+                    <>
+                        <h3>Border</h3>
+                        <ul>
+                            {borders.map(border => {
+                                const [country] = countries?.filter(country => country.cca3 === border)
+                                return (<li>
+                                    <Link key={country?.id} to={`/country/${country?.cca3}`}>{country?.name?.common}</Link>
+                                </li>)
+                            })}
+                        </ul>
+                    </>
+                }
             </div>
 
         </div>
