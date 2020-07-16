@@ -1,0 +1,19 @@
+
+.sidebar{
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.country-link-container{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.country-link-container img{
+    width:40px;
+    margin-right: 10px;
+}
